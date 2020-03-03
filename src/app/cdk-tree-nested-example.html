@@ -1,5 +1,6 @@
 <input type="text" (input)="filter($event.target.value)">
 <div class="main-tree-section">
+
 	<div class="tree-section">
 		<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
 			<!-- This is the tree node template for leaf nodes -->
@@ -25,12 +26,26 @@
       </button>
 						{{node.name}}
 					</div>
-					<div class="sub-tree" *ngIf="treeControl.isExpanded(node)">
-						<ng-container cdkTreeNodeOutlet></ng-container>
-					</div>
-
 				</ng-container>
+
+				<div class="sub-tree" *ngIf="treeControl.isExpanded(node)">
+          <div class="sub">
+					  <ng-container cdkTreeNodeOutlet></ng-container>
+          </div>
+				</div>
+				<!-- <ng-container [ngTemplateOutlet]="itemTemplate" ngTemplateOutletContext>
+						
+					</ng-container> -->
+
+
+
 			</cdk-nested-tree-node>
 		</cdk-tree>
 	</div>
+
+
+	<!-- <ng-template #itemTemplate>
+
+	</ng-template> -->
+
 </div>

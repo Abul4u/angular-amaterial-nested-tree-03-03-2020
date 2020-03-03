@@ -26,13 +26,14 @@
   display: block;
   clear: both;
 }
-
+.tree-section{
+  overflow: auto;
+}
 .tree-section, .sub-tree{
   border: 1px solid #606060;
   padding: 0 !important;
   width: 200px;
   height: 100%;
-  overflow: auto;
 }
 .sub-tree{
   /* overflow-x: hidden; */
@@ -40,4 +41,9 @@
   position: absolute;
   margin-left: 200px;
   top: 0;
+}
+.sub{
+  height: 100%;
+  overflow:auto;
+ 
 }

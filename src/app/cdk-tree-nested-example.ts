@@ -14,10 +14,10 @@ interface FoodNode {
   children?: FoodNode[];
 }
 
-interface Options{ 
+interface Options {
   dataSource?: FoodNode[] | FoodNode;
   node?: FoodNode;
-  searchTerms?: string
+  searchTerms?: string;
 }
 
 const TREE_DATA: FoodNode[] = [
@@ -34,12 +34,137 @@ const TREE_DATA: FoodNode[] = [
     children: [
       {
         name: "Green",
-        children: [{ name: "Broccoli" }, { name: "Brussels sprouts" }, { name: "Broccoli" }, { name: "Brussels sprouts" }, { name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" },{ name: "Broccoli" }, { name: "Brussels sprouts" }]
+        children: [
+          {
+            name: "Broccoli Children",
+            children: [
+              {
+                name: "Fruit1",
+                level: 0,
+                index: 0,
+                children: [
+                  { name: "Apple1" },
+                  { name: "Banana1" },
+                  { name: "Fruit loops1" }
+                ]
+              },
+              {
+                name: "Fruit2",
+                level: 0,
+                index: 0,
+                children: [
+                  { name: "Apple2" },
+                  { name: "Banana2" },
+                  { name: "Fruit loops2" }
+                ]
+              }
+            ]
+          },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" },
+          { name: "Broccoli" },
+          { name: "Brussels sprouts" }
+        ]
       },
       {
         name: "Orange",
         children: [{ name: "Pumpkins" }, { name: "Carrots" }]
-      }
+      },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },
+  {
+    name: "Fruit",
+    level: 0,
+    index: 0,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  }
     ]
   },
   {
@@ -129,9 +254,9 @@ export class CdkTreeNestedExample {
   dataSource: FoodNode[] = TREE_DATA;
   // dataSource = new ArrayDataSource(TREE_DATA);
 
-  hasChild = (_: number, node: FoodNode) =>{
-    node.isVisible = true
-    return !!node.children && node.children.length > 0
+  hasChild = (_: number, node: FoodNode) => {
+    node.isVisible = true;
+    return !!node.children && node.children.length > 0;
   };
 
   isParentNode: boolean = false;
@@ -141,57 +266,69 @@ export class CdkTreeNestedExample {
 
   onParent(node: FoodNode) {
     this.selectedNode = node;
-
+  console.log(node);
     if (node.level === 0) {
       this.selectedNodeIndex = node.index;
-      
+
       const isExpanded = this.treeControl.isExpanded(node);
-      if(!isExpanded){
+      if (!isExpanded) {
         this.treeControl.collapseAll();
         this.treeControl.expand(node);
         this.isParentNode = true;
-      }else{
+      } else {
         this.treeControl.collapse(node);
         this.isParentNode = false;
       }
       return;
     }
     let dataSource: FoodNode[] | FoodNode = this.dataSource;
-    if(this.selectedNodeIndex){
-      dataSource = this.dataSource[this.selectedNodeIndex]
+    if (this.selectedNodeIndex) {
+      dataSource = this.dataSource[this.selectedNodeIndex];
     }
-    this.findNode({'dataSource': dataSource,'node': node});
+    this.findNode({ dataSource: dataSource, node: node });
   }
 
-  findNode(options: Options = { 'dataSource': this.dataSource, 'node': this.selectedNode }) {
-    const ds = (typeof options.dataSource === 'object')? options.dataSource.children: options.dataSource;
-    
+  findNode(
+    options: Options = { dataSource: this.dataSource, node: this.selectedNode }
+  ) {
+    const ds =
+      typeof options.dataSource === "object"
+        ? options.dataSource.children
+        : options.dataSource;
+
     if (ds) {
       ds.forEach((nodeItem: FoodNode) => {
-        if(nodeItem === options.node){
+        if (nodeItem === options.node) {
           // this.collapseSiblings( ds, options.node);
-          this.collapseSiblings( options.dataSource, options.node);
-        } else{
-          if(nodeItem.children && nodeItem.children.length > 0 && this.selectedNodeIndex){
-            this.findNode({ 'dataSource': nodeItem.children, 'node': options.node});
+          this.collapseSiblings(options.dataSource, options.node);
+        } else {
+          if (
+            nodeItem.children &&
+            nodeItem.children.length > 0 &&
+            this.selectedNodeIndex
+          ) {
+            this.findNode({
+              dataSource: nodeItem.children,
+              node: options.node
+            });
           }
         }
       });
     }
-
   }
 
   collapseSiblings(parentNode: FoodNode | FoodNode[], node: FoodNode) {
-    let parentNodes = (typeof parentNode === 'object')? parentNode.children: parentNode;
+    let parentNodes =
+      typeof parentNode === "object" ? parentNode.children : parentNode;
     if (parentNodes) {
       parentNodes.forEach((nodeItem: FoodNode) => {
         if (nodeItem !== node) {
           this.treeControl.collapse(nodeItem);
-        }else{
+        } else {
           const isExpanded = this.treeControl.isExpanded(node);
-          if(!isExpanded){
+          if (!isExpanded) {
             this.treeControl.expand(node);
-          }else{
+          } else {
             this.selectedNode = parentNode;
             this.treeControl.collapse(node);
           }
@@ -206,8 +343,10 @@ export class CdkTreeNestedExample {
 
   filter(searchTerms: string) {
     console.log(this.isParentNode);
-    let parentNode = (this.isParentNode)? this.selectedNode.children: this.dataSource;
-    console.log('Parent Node: ', this.parentNode);
+    let parentNode = this.isParentNode
+      ? this.selectedNode.children
+      : this.dataSource;
+    console.log("Parent Node: ", this.parentNode);
 
     if (parentNode) {
       parentNode.forEach((nodeItem: FoodNode) => {

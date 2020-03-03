@@ -266,7 +266,7 @@ export class CdkTreeNestedExample {
 
   onParent(node: FoodNode) {
     this.selectedNode = node;
-  console.log(node);
+  
     if (node.level === 0) {
       this.selectedNodeIndex = node.index;
 
@@ -291,6 +291,7 @@ export class CdkTreeNestedExample {
   findNode(
     options: Options = { dataSource: this.dataSource, node: this.selectedNode }
   ) {
+    console.log('Node Out: ', options.node);
     const ds =
       typeof options.dataSource === "object"
         ? options.dataSource.children
@@ -299,7 +300,7 @@ export class CdkTreeNestedExample {
     if (ds) {
       ds.forEach((nodeItem: FoodNode) => {
         if (nodeItem === options.node) {
-          // this.collapseSiblings( ds, options.node);
+          console.log('Node: ', nodeItem);
           this.collapseSiblings(options.dataSource, options.node);
         } else {
           if (

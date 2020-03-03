@@ -15,7 +15,7 @@ interface FoodNode {
 }
 
 interface Options {
-  dataSource?: FoodNode[] | FoodNode;
+  dataSource?: FoodNode;
   node?: FoodNode;
   searchTerms?: string;
 }
@@ -281,27 +281,26 @@ export class CdkTreeNestedExample {
       }
       return;
     }
-    let dataSource: FoodNode[] | FoodNode = this.dataSource;
+    
     if (this.selectedNodeIndex) {
-      dataSource = this.dataSource[this.selectedNodeIndex];
+      let dataSource: FoodNode = this.dataSource[this.selectedNodeIndex];
+      this.findNode({ dataSource: dataSource, node: node });
     }
-    this.findNode({ dataSource: dataSource, node: node });
+    
   }
 
-  findNode(
-    options: Options = { dataSource: this.dataSource, node: this.selectedNode }
-  ) {
+  findNode(options: Options) {
     console.log('Node Out: ', options.node);
-    const ds =
-      typeof options.dataSource === "object"
-        ? options.dataSource.children
-        : options.dataSource;
+    const ds = options.dataSource;
+      // typeof options.dataSource === "object"
+      //   ? options.dataSource.children
+      //   : options.dataSource;
 
-    if (ds) {
-      ds.forEach((nodeItem: FoodNode) => {
+    if (ds && ds.children) {
+      ds.children.forEach((nodeItem: FoodNode) => {
         if (nodeItem === options.node) {
           console.log('Node: ', nodeItem);
-          this.collapseSiblings(options.dataSource, options.node);
+          this.collapseSiblings(ds, options.node);
         } else {
           if (
             nodeItem.children &&
@@ -309,7 +308,7 @@ export class CdkTreeNestedExample {
             this.selectedNodeIndex
           ) {
             this.findNode({
-              dataSource: nodeItem.children,
+              'dataSource': nodeItem,
               node: options.node
             });
           }
@@ -318,9 +317,9 @@ export class CdkTreeNestedExample {
     }
   }
 
-  collapseSiblings(parentNode: FoodNode | FoodNode[], node: FoodNode) {
-    let parentNodes =
-      typeof parentNode === "object" ? parentNode.children : parentNode;
+  collapseSiblings(parentNode: FoodNode, node: FoodNode) {
+    let parentNodes = parentNode.children;
+      // typeof parentNode === "object" ? parentNode.children : parentNode;
     if (parentNodes) {
       parentNodes.forEach((nodeItem: FoodNode) => {
         if (nodeItem !== node) {

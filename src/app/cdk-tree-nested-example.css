@@ -1,0 +1,43 @@
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.example-tree-node {
+  display: block;
+}
+
+.example-tree-node .example-tree-node {
+  padding-left: 40px;
+}
+
+.main-tree-section{
+  position: relative;
+  border: 1px solid #505050;
+  height: 500px;
+}
+.main-tree-section::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tree-section, .sub-tree{
+  border: 1px solid #606060;
+  padding: 0 !important;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+.sub-tree{
+  /* overflow-x: hidden; */
+  overflow-wrap: break-word;
+  position: absolute;
+  margin-left: 200px;
+  top: 0;
+}

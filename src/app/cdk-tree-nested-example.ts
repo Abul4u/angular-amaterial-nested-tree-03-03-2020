@@ -40,8 +40,6 @@ const TREE_DATA: FoodNode[] = [
             children: [
               {
                 name: "Fruit1",
-                level: 0,
-                index: 0,
                 children: [
                   { name: "Apple1" },
                   { name: "Banana1" },
@@ -50,8 +48,6 @@ const TREE_DATA: FoodNode[] = [
               },
               {
                 name: "Fruit2",
-                level: 0,
-                index: 0,
                 children: [
                   { name: "Apple2" },
                   { name: "Banana2" },

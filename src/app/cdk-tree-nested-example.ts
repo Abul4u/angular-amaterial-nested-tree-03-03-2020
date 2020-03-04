@@ -83,158 +83,217 @@ const TREE_DATA: FoodNode[] = [
         name: "Orange",
         children: [{ name: "Pumpkins" }, { name: "Carrots" }]
       },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  }
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      }
     ]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 2,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 3,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 4,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 5,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 6,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 7,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 8,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 9,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 10,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
+    {
     name: "Fruit",
     level: 0,
-    index: 0,
+    index: 11,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 12,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 13,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 14,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 15,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 16,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 17,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 18,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 19,
+    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+  },  {
+    name: "Fruit",
+    level: 0,
+    index: 20,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
-  {
-    name: "Fruit",
-    level: 0,
-    index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  }
 ];
 
 /**
@@ -248,7 +307,6 @@ const TREE_DATA: FoodNode[] = [
 export class CdkTreeNestedExample {
   treeControl = new NestedTreeControl<FoodNode>(node => node.children);
   dataSource: FoodNode[] = TREE_DATA;
-  // dataSource = new ArrayDataSource(TREE_DATA);
 
   hasChild = (_: number, node: FoodNode) => {
     node.isVisible = true;
@@ -256,13 +314,12 @@ export class CdkTreeNestedExample {
   };
 
   isParentNode: boolean = false;
-  parentNode: FoodNode[];
   selectedNode: FoodNode;
   selectedNodeIndex: number | undefined = 0;
 
   onParent(node: FoodNode) {
     this.selectedNode = node;
-  
+
     if (node.level === 0) {
       this.selectedNodeIndex = node.index;
 
@@ -277,25 +334,19 @@ export class CdkTreeNestedExample {
       }
       return;
     }
-    
+
     if (this.selectedNodeIndex) {
       let dataSource: FoodNode = this.dataSource[this.selectedNodeIndex];
       this.findNode({ dataSource: dataSource, node: node });
     }
-    
   }
 
   findNode(options: Options) {
-    console.log('Node Out: ', options.node);
     const ds = options.dataSource;
-      // typeof options.dataSource === "object"
-      //   ? options.dataSource.children
-      //   : options.dataSource;
 
     if (ds && ds.children) {
       ds.children.forEach((nodeItem: FoodNode) => {
         if (nodeItem === options.node) {
-          console.log('Node: ', nodeItem);
           this.collapseSiblings(ds, options.node);
         } else {
           if (
@@ -304,7 +355,7 @@ export class CdkTreeNestedExample {
             this.selectedNodeIndex
           ) {
             this.findNode({
-              'dataSource': nodeItem,
+              dataSource: nodeItem,
               node: options.node
             });
           }
@@ -315,7 +366,6 @@ export class CdkTreeNestedExample {
 
   collapseSiblings(parentNode: FoodNode, node: FoodNode) {
     let parentNodes = parentNode.children;
-      // typeof parentNode === "object" ? parentNode.children : parentNode;
     if (parentNodes) {
       parentNodes.forEach((nodeItem: FoodNode) => {
         if (nodeItem !== node) {
@@ -333,21 +383,15 @@ export class CdkTreeNestedExample {
     }
   }
 
-  // filter(searchTerms?: string) {
-  //   this.filterNode(this.parentNode, searchTerms);
-  // }
-
   filter(searchTerms: string) {
-    console.log(this.isParentNode);
     let parentNode = this.isParentNode
       ? this.selectedNode.children
       : this.dataSource;
-    console.log("Parent Node: ", this.parentNode);
 
     if (parentNode) {
       parentNode.forEach((nodeItem: FoodNode) => {
         nodeItem.isVisible = true;
-        const isFind =
+        const isFind = 
           nodeItem.name
             .toLocaleLowerCase()
             .indexOf(searchTerms.toLocaleLowerCase()) > -1;

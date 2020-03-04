@@ -2,6 +2,9 @@
 <div class="main-tree-section">
 
 	<div class="tree-section">
+    <div class="tree-heading">
+      Categories
+		</div>
 		<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
 			<!-- This is the tree node template for leaf nodes -->
 			<cdk-nested-tree-node *cdkTreeNodeDef="let node">
@@ -9,8 +12,7 @@
 				<!-- {{node.isVisible}} -->
 				<ng-container *ngIf="node.isVisible">
 					<div class="tree-nodes-div">
-						<button mat-icon-button disabled></button>
-						{{node.name}}
+						<mat-radio-button>{{node.name}}</mat-radio-button>
 					</div>
 				</ng-container>
 			</cdk-nested-tree-node>
@@ -29,9 +31,12 @@
 				</ng-container>
 
 				<div class="sub-tree" *ngIf="treeControl.isExpanded(node)">
-          <div class="sub">
-					  <ng-container cdkTreeNodeOutlet></ng-container>
-          </div>
+					<div class="tree-heading">
+						{{node.name}}
+					</div>
+					<div class="sub">
+						<ng-container cdkTreeNodeOutlet></ng-container>
+					</div>
 				</div>
 				<!-- <ng-container [ngTemplateOutlet]="itemTemplate" ngTemplateOutletContext>
 						

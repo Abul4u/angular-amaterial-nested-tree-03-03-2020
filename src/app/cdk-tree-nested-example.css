@@ -43,7 +43,11 @@
   top: 0;
 }
 .sub{
-  height: 100%;
+  height: calc(100% - 33px);
   overflow:auto;
- 
+}
+.tree-heading{
+  background-color: #505050;
+  color: #fff;
+  padding: 7px 10px;
 }

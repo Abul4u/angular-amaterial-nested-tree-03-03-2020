@@ -7,21 +7,21 @@
 		</div>
 		<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl" class="sub">
 			<!-- This is the tree node template for leaf nodes -->
-			<cdk-nested-tree-node *cdkTreeNodeDef="let node">
+			<cdk-nested-tree-node *cdkTreeNodeDef="let node" class="child-div">
 				<!-- use a disabled button to provide padding for tree leaf -->
-				<!-- {{node.isVisible}} -->
 				<ng-container *ngIf="node.isVisible">
-					<div class="tree-nodes-div">
-						<mat-radio-button>{{node.name}}</mat-radio-button>
+					<div class="tree-nodes-div" [class.radio-selected]="selectRadio.checked">
+            <button mat-icon-button disabled></button>
+						<mat-radio-button #selectRadio>{{node.name}}</mat-radio-button>
 					</div>
 				</ng-container>
 			</cdk-nested-tree-node>
 
 			<!-- This is the tree node template for expandable nodes -->
-			<cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChild">
+			<cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChild" class="parent-div">
 				<!-- {{node.isVisible}} -->
 				<ng-container *ngIf="node.isVisible">
-					<div class="tree-nodes-div">
+					<div class="tree-nodes-div" [class.opened]="treeControl.isExpanded(node)">
 						<button mat-icon-button [attr.aria-label]="'toggle ' + node.name" (click)="onParent(node)">
               <mat-icon class="mat-icon-rtl-mirror">
                 {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}

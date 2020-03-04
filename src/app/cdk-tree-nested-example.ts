@@ -1,6 +1,7 @@
 import { ArrayDataSource } from "@angular/cdk/collections";
 import { Component } from "@angular/core";
 import { NestedTreeControl } from "@angular/cdk/tree";
+import { ScrollingModule } from "@angular/cdk/scrolling";
 
 /**
  * Food data with nested structure.
@@ -84,6 +85,112 @@ const TREE_DATA: FoodNode[] = [
         children: [{ name: "Pumpkins" }, { name: "Carrots" }]
       },
       {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },
+      {
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
+        name: "Fruit",
+        children: [
+          { name: "Apple" },
+          { name: "Banana" },
+          { name: "Fruit loops" }
+        ]
+      },{
         name: "Fruit",
         children: [
           { name: "Apple" },

@@ -2,10 +2,10 @@
 <div class="main-tree-section">
 
 	<div class="tree-section">
-    <div class="tree-heading">
-      Categories
+		<div class="tree-heading">
+			Categories
 		</div>
-		<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+		<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl" class="sub">
 			<!-- This is the tree node template for leaf nodes -->
 			<cdk-nested-tree-node *cdkTreeNodeDef="let node">
 				<!-- use a disabled button to provide padding for tree leaf -->
@@ -16,16 +16,17 @@
 					</div>
 				</ng-container>
 			</cdk-nested-tree-node>
+
 			<!-- This is the tree node template for expandable nodes -->
 			<cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChild">
 				<!-- {{node.isVisible}} -->
 				<ng-container *ngIf="node.isVisible">
 					<div class="tree-nodes-div">
 						<button mat-icon-button [attr.aria-label]="'toggle ' + node.name" (click)="onParent(node)">
-        <mat-icon class="mat-icon-rtl-mirror">
-          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-        </mat-icon>
-      </button>
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
 						{{node.name}}
 					</div>
 				</ng-container>
@@ -35,7 +36,10 @@
 						{{node.name}}
 					</div>
 					<div class="sub">
+						<!-- <cdk-virtual-scroll-viewport itemSize="50" minBufferPx="200" maxBufferPx="400" style="height: 100%">
+                <ng-container *cdkVirtualFor="let n of node.children"></ng-container> -->
 						<ng-container cdkTreeNodeOutlet></ng-container>
+						<!-- </cdk-virtual-scroll-viewport> -->
 					</div>
 				</div>
 				<!-- <ng-container [ngTemplateOutlet]="itemTemplate" ngTemplateOutletContext>
@@ -47,10 +51,5 @@
 			</cdk-nested-tree-node>
 		</cdk-tree>
 	</div>
-
-
-	<!-- <ng-template #itemTemplate>
-
-	</ng-template> -->
 
 </div>

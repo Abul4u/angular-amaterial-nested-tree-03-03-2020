@@ -1,4 +1,4 @@
-<input type="text" (input)="filter($event.target.value)">
+<input type="text" class="search" placeholder="Search" (input)="filter($event.target.value)">
 <div class="main-tree-section">
 
 	<div class="tree-section">
@@ -10,7 +10,7 @@
 			<cdk-nested-tree-node *cdkTreeNodeDef="let node" class="child-div">
 				<!-- use a disabled button to provide padding for tree leaf -->
 				<ng-container *ngIf="node.isVisible">
-					<div class="tree-nodes-div" [class.radio-selected]="selectRadio.checked">
+					<div class="tree-nodes-div" [class.radio-selected]="selectRadio.checked" (click)="onParent(node)">
             <button mat-icon-button disabled></button>
 						<mat-radio-button #selectRadio>{{node.name}}</mat-radio-button>
 					</div>
@@ -53,3 +53,6 @@
 	</div>
 
 </div>
+
+
+

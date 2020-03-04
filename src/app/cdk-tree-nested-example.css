@@ -16,6 +16,12 @@
   padding-left: 40px;
 } */
 
+.search{
+  margin: 0 0 10px;
+  padding: 5px 6px;
+  width: 186px;
+}
+
 .main-tree-section{
   position: relative;
   border-top: 1px solid #dad9d9;

@@ -420,6 +420,7 @@ export class CdkTreeNestedExample {
     return !!node.children && node.children.length > 0;
   };
 
+  searchTermsText: string;
   isParentNode: boolean = false;
   selectedNode: FoodNode;
   selectedNodeIndex: number | undefined = 0;
@@ -438,6 +439,9 @@ export class CdkTreeNestedExample {
       } else {
         this.treeControl.collapse(node);
         this.isParentNode = false;
+        if(!this.searchTermsText){
+          this.filter('');
+        }
       }
       return;
     }
@@ -476,7 +480,7 @@ export class CdkTreeNestedExample {
     if (parentNodes) {
       parentNodes.forEach((nodeItem: FoodNode) => {
         if (nodeItem !== node) {
-          this.treeControl.collapse(nodeItem);
+          this.treeControl.collapseDescendants(nodeItem);
         } else {
           const isExpanded = this.treeControl.isExpanded(node);
           if (!isExpanded) {
@@ -484,6 +488,9 @@ export class CdkTreeNestedExample {
           } else {
             this.selectedNode = parentNode;
             this.treeControl.collapse(node);
+            if(!this.searchTermsText){
+              this.filter('');
+            }
           }
         }
       });
@@ -491,6 +498,7 @@ export class CdkTreeNestedExample {
   }
 
   filter(searchTerms: string) {
+    this.searchTermsText = searchTerms;
     let parentNode = this.isParentNode
       ? this.selectedNode.children
       : this.dataSource;

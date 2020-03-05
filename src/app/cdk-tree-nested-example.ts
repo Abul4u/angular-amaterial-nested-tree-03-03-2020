@@ -487,7 +487,7 @@ export class CdkTreeNestedExample {
             this.treeControl.expand(node);
           } else {
             this.selectedNode = parentNode;
-            this.treeControl.collapse(node);
+            this.treeControl.collapseDescendants(node);
             if(!this.searchTermsText){
               this.filter('');
             }

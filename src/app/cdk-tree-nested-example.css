@@ -65,6 +65,7 @@
 /* item */
 .tree-nodes-div{
   border-bottom: 1px solid #dad9d9;
+  /* transition: all 0.3s ease-in; */
 }
 .tree-nodes-div:hover{
   background-color: #ececec;

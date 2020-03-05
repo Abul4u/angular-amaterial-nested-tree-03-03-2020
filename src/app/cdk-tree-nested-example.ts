@@ -15,6 +15,14 @@ interface FoodNode {
   children?: FoodNode[];
 }
 
+interface FoodNodeObject {
+  name?: string;
+  level?: number;
+  index?: number;
+  isVisible?: boolean;
+  children?: FoodNodeObject;
+}
+
 interface Options {
   dataSource?: FoodNode;
   node?: FoodNode;
@@ -26,7 +34,11 @@ const TREE_DATA: FoodNode[] = [
     name: "Fruit",
     level: 0,
     index: 0,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [
+      { name: "Apple", level: 1 },
+      { name: "Banana", level: 1 },
+      { name: "Fruit loops", level: 1 }
+    ]
   },
   {
     name: "Vegetables",
@@ -35,24 +47,28 @@ const TREE_DATA: FoodNode[] = [
     children: [
       {
         name: "Green",
+        level: 1,
         children: [
           {
             name: "Broccoli Children",
+            level: 2,
             children: [
               {
                 name: "Fruit1",
+                level: 3,
                 children: [
-                  { name: "Apple1" },
-                  { name: "Banana1" },
-                  { name: "Fruit loops1" }
+                  { name: "Apple", level: 4 },
+                  { name: "Banana", level: 4 },
+                  { name: "Fruit loops", level: 4 }
                 ]
               },
               {
                 name: "Fruit2",
+                level: 3,
                 children: [
-                  { name: "Apple2" },
-                  { name: "Banana2" },
-                  { name: "Fruit loops2" }
+                  { name: "Apple2", level: 4 },
+                  { name: "Banana2", level: 4 },
+                  { name: "Fruit loops2", level: 4 }
                 ]
               }
             ]
@@ -99,98 +115,112 @@ const TREE_DATA: FoodNode[] = [
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
           { name: "Banana" },
           { name: "Fruit loops" }
         ]
-      },{
+      },
+      {
         name: "Fruit",
         children: [
           { name: "Apple" },
@@ -296,111 +326,120 @@ const TREE_DATA: FoodNode[] = [
       }
     ]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 2,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 3,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 4,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 5,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 6,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 7,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 8,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 9,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 10,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
   },
-    {
+  {
     name: "Fruit",
     level: 0,
     index: 11,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 12,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 13,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 14,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 15,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 16,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 17,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 18,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 19,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },  {
+  },
+  {
     name: "Fruit",
     level: 0,
     index: 20,
     children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
-  },
+  }
 ];
 
 /**
@@ -424,28 +463,42 @@ export class CdkTreeNestedExample {
   isParentNode: boolean = false;
   selectedNode: FoodNode;
   selectedNodeIndex: number | undefined = 0;
+  bredcrumbs: Array<T> = [];
+
+  creatingBreadCrumbs(node: FoodNode | null) {
+    if(!node){
+      this.bredcrumbs = [];
+      console.log("Checking undefined: ", this.bredcrumbs);
+      return;
+    }
+    this.bredcrumbs.slice(0, node.level);
+    this.bredcrumbs[node.level] = node.name;
+    console.log("Checking: ", this.bredcrumbs);
+  }
 
   onParent(node: FoodNode) {
     this.selectedNode = node;
-
+    
     if (node.level === 0) {
       this.selectedNodeIndex = node.index;
-
+      
       const isExpanded = this.treeControl.isExpanded(node);
       if (!isExpanded) {
         this.treeControl.collapseAll();
         this.treeControl.expand(node);
         this.isParentNode = true;
+        this.creatingBreadCrumbs(node);
       } else {
         this.treeControl.collapse(node);
         this.isParentNode = false;
-        if(!this.searchTermsText){
-          this.filter('');
+        if (!this.searchTermsText) {
+          this.filter("");
         }
+        this.creatingBreadCrumbs(null);
       }
       return;
     }
-
+    
     if (this.selectedNodeIndex) {
       let dataSource: FoodNode = this.dataSource[this.selectedNodeIndex];
       this.findNode({ dataSource: dataSource, node: node });
@@ -485,11 +538,12 @@ export class CdkTreeNestedExample {
           const isExpanded = this.treeControl.isExpanded(node);
           if (!isExpanded) {
             this.treeControl.expand(node);
+            // this.creatingBreadCrumbs(node, true);
           } else {
             this.selectedNode = parentNode;
             this.treeControl.collapseDescendants(node);
-            if(!this.searchTermsText){
-              this.filter('');
+            if (!this.searchTermsText) {
+              this.filter("");
             }
           }
         }
@@ -506,7 +560,7 @@ export class CdkTreeNestedExample {
     if (parentNode) {
       parentNode.forEach((nodeItem: FoodNode) => {
         nodeItem.isVisible = true;
-        const isFind = 
+        const isFind =
           nodeItem.name
             .toLocaleLowerCase()
             .indexOf(searchTerms.toLocaleLowerCase()) > -1;
@@ -518,11 +572,9 @@ export class CdkTreeNestedExample {
     }
   }
 
-
   // testRadio(radio){
   //   console.log(radio);
   // }
-
 }
 
 /**  Copyright 2019 Google LLC. All Rights Reserved.

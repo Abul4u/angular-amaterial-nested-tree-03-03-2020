@@ -1,20 +1,4 @@
-/* .example-tree-invisible {
-  display: none;
-}
-
-.example-tree ul,
-.example-tree li {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style-type: none;
-}
-.example-tree-node {
-  display: block;
-}
-
-.example-tree-node .example-tree-node {
-  padding-left: 40px;
-} */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .search{
   margin: 0 0 10px;
@@ -38,8 +22,8 @@
   overflow: auto;
 }
 .tree-section, .sub-tree{
-  border-left: 1px solid #dad9d9;
-  border-right: 1px solid #dad9d9;
+  border-left: 1px solid #e0e5eb;
+  border-right: 1px solid #e0e5eb;
   padding: 0 !important;
   width: 200px;
   height: 100%;
@@ -64,11 +48,29 @@
 
 /* item */
 .tree-nodes-div{
-  border-bottom: 1px solid #dad9d9;
+  border-bottom: 1px solid #dce1e3;
+  padding: 11px 50px 11px 18px;
+  position: relative;
   /* transition: all 0.3s ease-in; */
 }
 .tree-nodes-div:hover{
-  background-color: #ececec;
+  background-color: #f7f6f6;
+}
+
+.tree-nodes-div h5, .tree-nodes-div h6{
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333;
+  margin: 0;
+}
+
+.tree-nodes-div h6{
+  color: #666;
 }
 /* .parent-div:last-of-type > .tree-nodes-div, .child-div:last-of-type > .tree-nodes-div{ 
   border-bottom-color: transparent;
@@ -80,5 +82,19 @@
 }
 
 .opened, .radio-selected{
-  background-color: #e5eeff !important;
+  background-color: #f8fbff !important;
 }
+
+.btn-expand, .btn-radio{
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mat-icon-rtl-mirror{
+  color: #999;
+}
+
+

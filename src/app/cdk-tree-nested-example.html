@@ -11,8 +11,10 @@
 				<!-- use a disabled button to provide padding for tree leaf -->
 				<ng-container *ngIf="node.isVisible">
 					<div class="tree-nodes-div" [class.radio-selected]="selectRadio.checked">
-            <button mat-icon-button disabled></button>
-						<mat-radio-button #selectRadio>{{node.name}}</mat-radio-button>
+            <!-- <button mat-icon-button disabled></button> -->
+            <h5>{{node.name}}</h5>
+            <h6>{{node.itemCode}}</h6>
+						<mat-radio-button class="btn-radio" #selectRadio></mat-radio-button>
 					</div>
 				</ng-container>
 			</cdk-nested-tree-node>
@@ -21,13 +23,16 @@
 			<cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChild" class="parent-div">
 				<!-- {{node.isVisible}} -->
 				<ng-container *ngIf="node.isVisible">
-					<div class="tree-nodes-div" [class.opened]="treeControl.isExpanded(node)">
-						<button mat-icon-button [attr.aria-label]="'toggle ' + node.name" (click)="onParent(node)">
+					<div class="tree-nodes-div" [class.opened]="treeControl.isExpanded(node)" (click)="onParent(node)">
+            <h5>{{node.name}}</h5>
+            <h6>{{node.itemCode}}</h6>
+						<button mat-icon-button class="btn-expand" [attr.aria-label]="'toggle ' + node.name">
               <mat-icon class="mat-icon-rtl-mirror">
-                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                chevron_right
+                <!-- {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}} -->
               </mat-icon>
             </button>
-						{{node.name}}
+           
 					</div>
 				</ng-container>
 

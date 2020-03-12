@@ -11,6 +11,7 @@ interface FoodNode {
   name?: string;
   level?: number;
   index?: number;
+  itemCode?:number;
   isVisible?: boolean;
   children?: FoodNode[];
 }
@@ -19,6 +20,7 @@ interface FoodNodeObject {
   name?: string;
   level?: number;
   index?: number;
+  itemCode?:number;
   isVisible?: boolean;
   children?: FoodNodeObject;
 }
@@ -31,414 +33,419 @@ interface Options {
 
 const TREE_DATA: FoodNode[] = [
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 0,
     children: [
-      { name: "Apple", level: 1 },
-      { name: "Banana", level: 1 },
-      { name: "Fruit loops", level: 1 }
+      { itemCode: 5001, name: "Apple", level: 1 },
+      { itemCode: 5001, name: "Banana", level: 1 },
+      { itemCode: 5001, name: "Fruit loops", level: 1 }
     ]
   },
   {
     name: "Vegetables",
+    itemCode: 5001,
     level: 0,
     index: 1,
     children: [
       {
         name: "Green",
+        itemCode: 5001,
         level: 1,
         children: [
           {
             name: "Broccoli Children",
+            itemCode: 5001,
             level: 2,
             children: [
               {
                 name: "Fruit1",
+                itemCode: 5001,
                 level: 3,
                 children: [
-                  { name: "Apple", level: 4 },
-                  { name: "Banana", level: 4 },
-                  { name: "Fruit loops", level: 4 }
+                  { itemCode: 5001, name: "Apple", level: 4 },
+                  { itemCode: 5001, name: "Banana", level: 4 },
+                  { itemCode: 5001, name: "Fruit loops", level: 4 }
                 ]
               },
               {
                 name: "Fruit2",
+                itemCode: 5001,
                 level: 3,
                 children: [
-                  { name: "Apple2", level: 4 },
-                  { name: "Banana2", level: 4 },
-                  { name: "Fruit loops2", level: 4 }
+                  { name: "Apple2", itemCode: 5001, level: 4 },
+                  { name: "Banana2", itemCode: 5001, level: 4 },
+                  { name: "Fruit loops2", itemCode: 5001, level: 4 }
                 ]
               }
             ]
           },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" },
-          { name: "Broccoli" },
-          { name: "Brussels sprouts" }
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" },
+          { itemCode: 5001, name: "Broccoli" },
+          { itemCode: 5001, name: "Brussels sprouts" }
         ]
       },
       {
-        name: "Orange",
-        children: [{ name: "Pumpkins" }, { name: "Carrots" }]
+        itemCode: 5001, name: "Orange",
+        children: [{ itemCode: 5001, name: "Pumpkins" }, { itemCode: 5001, name: "Carrots" }]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       },
       {
-        name: "Fruit",
+        name: "Fruit", itemCode: 5001,
         children: [
-          { name: "Apple" },
-          { name: "Banana" },
-          { name: "Fruit loops" }
+          { itemCode: 5001, name: "Apple" },
+          { itemCode: 5001, name: "Banana" },
+          { itemCode: 5001, name: "Fruit loops" }
         ]
       }
     ]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 2,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 3,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 4,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 5,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 6,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 7,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 8,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 9,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 10,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 11,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 12,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 13,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 14,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 15,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 16,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 17,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 18,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 19,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   },
   {
-    name: "Fruit",
+    name: "Fruit", itemCode: 5001,
     level: 0,
     index: 20,
-    children: [{ name: "Apple" }, { name: "Banana" }, { name: "Fruit loops" }]
+    children: [{ itemCode: 5001, name: "Apple" }, { itemCode: 5001, name: "Banana" }, { itemCode: 5001, name: "Fruit loops" }]
   }
 ];
 

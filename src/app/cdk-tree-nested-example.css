@@ -25,14 +25,14 @@
   border-left: 1px solid #e0e5eb;
   border-right: 1px solid #e0e5eb;
   padding: 0 !important;
-  width: 200px;
+  width: 220px;
   height: 100%;
 }
 .sub-tree{
   /* overflow-x: hidden; */
   overflow-wrap: break-word;
   position: absolute;
-  margin-left: 200px;
+  margin-left: 220px;
   top: 0;
 }
 .sub{
